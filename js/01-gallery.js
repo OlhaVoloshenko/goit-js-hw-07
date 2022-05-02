@@ -34,7 +34,7 @@ const imgValue = evt.target;
 let parentImg = imgValue.closest('.gallery__image');
 
 parentImg = basicLightbox.create(`
-    <img width="1280" height="800" src="${parentImg.dataset.source}">
+    <img src="${parentImg.dataset.source}" width="1280" height="800">
 `).show();
 
 }
