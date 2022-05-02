@@ -3,7 +3,7 @@ import { galleryItems } from './gallery-items.js';
 console.log(galleryItems);
 
 const galleryList = document.querySelector('.gallery');
-const galleryImg = createImgEl(galleryItems);
+const galleryImg = createGalerryAtt(galleryItems);
 galleryList.insertAdjacentElement('beforeend', galleryImg);
 galleryList.addEventListener('click', galleryListModal);
 
@@ -23,11 +23,11 @@ function createGalerryAtt(galleryItems){
     }).join('');
 }
 
-function galleryListModal(event) {
-    event.preventDefault();
-    const imgBig = event.target.classlist.contains('gallery__image');
+function galleryListModal(evt) {
+    evt.preventDefault();
+    const imgOriginal = evt.target.classlist.contains('gallery__image');
 
-if(!imgBig) {
+if(!imgOriginal) {
     return;
 }
 const imgValue = evt.target;
