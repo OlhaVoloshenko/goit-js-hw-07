@@ -15,8 +15,8 @@ function createGalerryAtt(galleryItems){
                 <img
                     class="gallery__image"
                     src="${preview}"
-                    data-source="${description}"
-                    alt="${original}"
+                    data-source="${original}"
+                    alt="${description}"
                 />
             </a>
         </div> `;
