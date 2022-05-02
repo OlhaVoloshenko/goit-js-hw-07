@@ -7,6 +7,8 @@ const galleryImg = createGalerryAtt(galleryItems);
 galleryList.insertAdjacentHTML('beforeend', galleryImg);
 galleryList.addEventListener('click', galleryListModal);
 
+
+
 function createGalerryAtt(galleryItems){
     return galleryItems.map(({ preview, original, description }) => {
         return `
@@ -36,7 +38,8 @@ let parentImg = imgValue.closest('.gallery__image');
 
 parentImg = basicLightbox.create(`
     <img src="${parentImg.dataset.source}" width="1280" height="800">
-`).show()
+`).show();
+
 };
 
 
