@@ -26,17 +26,17 @@ function createGalerryAtt(galleryItems){
 function galleryListModal(evt) {
     evt.preventDefault();
     const imgOriginal = evt.target.classList.contains('gallery__image');
-
+    
 if(!imgOriginal) {
     return;
 }
 const imgValue = evt.target;
+
 let parentImg = imgValue.closest('.gallery__image');
 
 parentImg = basicLightbox.create(`
     <img src="${parentImg.dataset.source}" width="1280" height="800">
-`).show();
-
-}
+`).show()
+};
 
 
