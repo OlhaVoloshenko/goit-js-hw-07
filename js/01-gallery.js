@@ -25,7 +25,7 @@ function createGalerryAtt(galleryItems){
 
 function galleryListModal(evt) {
     evt.preventDefault();
-    const imgOriginal = evt.target.classlist.contains('gallery__image');
+    const imgOriginal = evt.target.classList.contains('gallery__image');
 
 if(!imgOriginal) {
     return;
