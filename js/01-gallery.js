@@ -4,7 +4,7 @@ console.log(galleryItems);
 
 const galleryList = document.querySelector('.gallery');
 const galleryImg = createGalerryAtt(galleryItems);
-galleryList.insertAdjacentElement('beforeend', galleryImg);
+galleryList.insertAdjacentHTML('beforeend', galleryImg);
 galleryList.addEventListener('click', galleryListModal);
 
 function createGalerryAtt(galleryItems){
