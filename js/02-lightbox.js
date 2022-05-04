@@ -11,6 +11,7 @@ galleryList.insertAdjacentHTML('beforeend', galleryImg);
 function createGalerryAtt(galleryItems){
     return galleryItems.map(({ preview, original, description }) => {
         return `
+        <li class="gallery__menu">
         <a class="gallery__item" href="${original}">
         <img class="gallery__image" src="${preview}" alt="${description}" />
       </a> `;
@@ -18,6 +19,5 @@ function createGalerryAtt(galleryItems){
 };
 
 let gallery = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250} );
-gallery.on('show.simplelightbox', function (evt) {
-  evt.preventDefault();
+gallery.on('show.simplelightbox', function () {
 });
